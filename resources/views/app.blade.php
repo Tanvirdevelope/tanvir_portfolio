@@ -16,6 +16,7 @@
 <body class="d-flex flex-column h-100">
 
     @include('layout.main.header')
+    @include('layout.main.loader')
 
     <div id="content-div">
         @yield('content')
@@ -24,6 +25,7 @@
     @include('layout.main.footer')
     
     
+    <script src="{{asset('js/axios.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     
     </body>

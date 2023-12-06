@@ -10,22 +10,26 @@ use App\Http\Controllers\ResumeController;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
 
 Route::get('/', [HomeController::class,'index']);
-
 Route::get('/about', [AboutController::class,'index']);
-
 Route::get('/resume', [ResumeController::class,'index']);
-
 Route::get('/projects', [ProjectController::class,'index']);
-
 Route::get('/contact', [ContactController::class,'index']);
+
+
+// Ajax Call Routes
+Route::get('/heroData', [HomeController::class,'heroData']);
+Route::get('/aboutData', [AboutController::class,'aboutData']);
+Route::get('/socialData', [AboutController::class,'socialData']);
+Route::get('/projectsData', [ProjectController::class,'projectsData']);
+Route::get('/resumeLink', [ResumeController::class,'resumeLink']);
+Route::get('/experiencesData', [ResumeController::class,'experiencesData']);
+Route::get('/educationData', [ResumeController::class,'educationData']);
+Route::get('/skillsData', [ResumeController::class,'skillsData']);
+Route::get('/languageData', [ResumeController::class,'languageData']);
+Route::post('/contactRequest', [ContactController::class,'contactRequest']);
 
 
 
