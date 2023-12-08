@@ -17,8 +17,7 @@
 
     @include('layout.main.header')
     @include('layout.main.loader')
-
-    <div id="content-div">
+    <div class="" id="content-div">
         @yield('content')
     </div>
     

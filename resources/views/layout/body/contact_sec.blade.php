@@ -1,7 +1,7 @@
 <section class="py-5">
     <div class="container px-5">
         <!-- Contact form-->
-        <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+        <div class="bg-light rounded-4 px-4 px-md-5">
             <div class="text-center mb-5">
                 <h1 class="fw-bolder text-gradient">Contact Me</h1>
                 <p class="lead fw-normal text-muted mb-0">Let's work together!</p>
@@ -41,7 +41,7 @@
 </section>
 
 <script>
-    let contactForm = document.getElementById('contactForm')
+    let contactForm = document.getElementById ('contactForm')
     contactForm.addEventListener('submit',async (event) => {
         event.preventDefault();
         let name=document.getElementById('name').value;
@@ -65,12 +65,22 @@
               phone:phone,
               message:msg
           }
-          let URl = "/contactRequest";
+          let URL = "/contactRequest";
 
-          let result=await axios.post(URl, formData);
+          //   Loader show Content hide
+          document.getElementById('loading-div').classList.remove('d-none');
+          document.getElementById('content-div').classList.add('d-none');
+
+          let result=await axios.post(URL, formData);
+
+          // Loader Hide Content Show
+          document.getElementById('loading-div').classList.add('d-none');
+          document.getElementById('content-div').classList.remove('d-none');
+
 
           if(result.status===200 && result.data===1){
-            alert("Your request has been successfully")
+            alert("Your request has been submitted successfully")
+            contactForm.reset();
           }
           else {
             alert('Something went wrong')
