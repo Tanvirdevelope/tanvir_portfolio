@@ -11,6 +11,7 @@
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
+    <script src="{{asset('assets/js/axios.min.js')}}"></script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -24,7 +25,7 @@
     @include('layout.main.footer')
     
     
-    <script src="{{asset('assets/js/axios.min.js')}}"></script>
+    
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     
     </body>
