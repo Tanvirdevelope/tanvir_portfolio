@@ -24,17 +24,17 @@
 </section>
 
 <script>
-    GetProjectList();
-    async function GetProjectList() {
-        let URL="/projectsData"
+    getProjectList();
+    async function getProjectList() {
 
         try { 
+            let URL="/projectsData"
 
             // Loader Show Content Hide
             document.getElementById('loading-div').classList.remove('d-none');
             document.getElementById('content-div').classList.add('d-none');
 
-            const response = await axios.get(URL);
+            let response = await axios.get(URL);
 
             document.getElementById('loading-div').classList.add('d-none');
             document.getElementById('content-div').classList.remove('d-none');

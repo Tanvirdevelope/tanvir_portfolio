@@ -3,7 +3,7 @@
     <div class="nav-center container">
       <!-- nav header -->
       <div class="nav-header">
-        <img class="logo" id="logo" src="assets/img/logo.png" alt="..." />
+        <a href="{{url('/')}}"><img class="logo" id="logo" src="assets/img/logo.png" alt="..." /></a>
         <button class="nav-toggle">
           <i class="fas fa-bars"></i>
         </button>
